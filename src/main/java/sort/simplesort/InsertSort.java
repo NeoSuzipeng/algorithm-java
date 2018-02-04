@@ -30,9 +30,30 @@ public class InsertSort {
      * @param n
      */
     public static void sort(Comparable[] array, Integer n){
-        for(int i = 1; i < n; i++)
-            for(int j = i; j > 0 && array[j].compareTo(array[j-1]) < 0; j--)
-                SortUtil.swap(array, j, j - 1);
+        for(int i = 1; i < n; i++){
+            Comparable temp = array[i];
+            int j;
+            for(j = i; j > 0 && array[j].compareTo(array[j-1]) < 0; j--)
+                array[j] = array[j - 1];
+            array[j] = temp;
+        }
+    }
+
+    /**
+     * 指定范围排序
+     * @param array
+     * @param l
+     * @param r
+     */
+    public static void sort(Comparable[] array, int l, int r){
+        for(int i = l + 1; i <= r; i++){
+            Comparable temp = array[i];
+            int j;
+            for(j = i; j > 0 && array[j].compareTo(array[j-1]) < 0; j--)
+                array[j] = array[j - 1];
+            array[j] = temp;
+        }
+
     }
 
 

@@ -1,5 +1,7 @@
 package Util;
 
+import java.util.Arrays;
+
 /**
  * Created by 10353 on 2018/1/31.
  * 随机生成数据最佳实践
@@ -27,6 +29,30 @@ public class RandomUtil {
             array[i] = new Integer((int)(Math.random()*(rangeR - rangeL + 1) + rangeL));
         }
         return array;
+    }
+
+    /**
+     * 生出有序度高，重复率低序列
+     * @param n
+     * @param noOrderNum
+     * @return
+     */
+    public static Integer[] generateNearlyOrderdData(int n, int noOrderNum){
+        Integer[] array = new Integer[n];
+        for(int i = 0; i < n; i++)
+            array[i] = i;
+        for(int i = 0; i < noOrderNum; i++){
+            SortUtil.swap(array, (int)(Math.random()*n), (int)(Math.random()*n));
+        }
+        return  array;
+    }
+    /**
+     * 拷贝随机生成的数组
+     * @param array
+     * @return
+     */
+    public static Integer[] copyGenerateRandomData(Integer[] array){
+        return Arrays.copyOf(array, array.length);
     }
 
 //    public static void main(String[] args) {

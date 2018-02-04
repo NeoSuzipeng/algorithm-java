@@ -4,13 +4,20 @@ import java.lang.reflect.Method;
 
 /**
  * Created by 10353 on 2018/1/30.
- * 元素交换工具
+ * 排序辅助工具类
  */
 public class SortUtil {
 
     //此处需注意Java函数参数传递问题
     //基本类型为值传递，对象为引用传递
     //还有一点关于Java泛型擦除，Object[]等效于C++中的T array[]
+
+    /**
+     * 实现元素的交换
+     * @param array
+     * @param i
+     * @param j
+     */
     public static void swap(Object[] array, int i, int j){
         Object temp;
         temp = array[i];
