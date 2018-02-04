@@ -22,7 +22,7 @@ public class QuickSort {
      * @param l
      * @param r
      */
-    public static void __quickSort(Comparable[] array, int l, int r){
+    private static void __quickSort(Comparable[] array, int l, int r){
 
         if(r - l < 16){
             InsertSort.sort(array, l, r);
@@ -46,7 +46,9 @@ public class QuickSort {
 //         问题：划分子序列时不平均
 //        Comparable v = array[l];
 //        优化1：
-        Comparable v = array[(int)(Math.random()*(r-l+1) + l)];
+        SortUtil.swap(array,l, (int)(Math.random()*(r-l+1) + l));
+        Comparable v = array[l];
+
 
         // array[l+1...j] < v ; array[j+1...i) > v
         // 扫描过程
