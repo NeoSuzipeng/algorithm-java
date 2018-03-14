@@ -46,6 +46,19 @@ public class RandomUtil {
         }
         return  array;
     }
+
+    /**
+     * 生出有序数组
+     * @param n
+     * @param noOrderNum
+     * @return
+     */
+    public static Integer[] generateOrderdData(int n){
+        Integer[] array = new Integer[n];
+        for(int i = 0; i < n; i++)
+            array[i] = i;
+        return  array;
+    }
     /**
      * 拷贝随机生成的数组
      * @param array

@@ -135,7 +135,13 @@ public class HeapSort<E extends Comparable> {
     }
 
     /**
-     * 堆序向下调整
+     * 堆序向下调整（开始时的顶点用e表示）
+     * 1.寻找当前堆顶点两个子节点中最大的一个
+     * 2.将找到的最大孩子上调
+     * 3.继续向下寻找直到e大于当前节点
+     * 4.将当前节点的值置为e
+     *
+     * Warn:寻找时的数组越界问题
      * @param index
      */
     private void shiftDown(int index) {
