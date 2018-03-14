@@ -175,12 +175,13 @@ public class HeapSort<E extends Comparable> {
      */
     public static void sort(Comparable[] array, Integer n){
 
-        HeapSort<Comparable> maxHeap = new HeapSort<Comparable>(n);
-        for( int i = 0 ; i < n ; i ++ )
-            maxHeap.add(array[i]);
+//        HeapSort<Comparable> heapSort = new HeapSort<Comparable>(n);
+//        for( int i = 0 ; i < n ; i ++ )
+//            heapSort.add(array[i]);
+        HeapSort<Comparable> heapSort = new HeapSort<Comparable>(array);
 
         for( int i = n-1 ; i >= 0 ; i -- )
-            array[i] = maxHeap.extractMax();
+            array[i] = heapSort.extractMax();
     }
 
 
