@@ -3,7 +3,8 @@
 *.war
 *.ear
 
-target/
+/target/
+/*.iml
 
 .settings/
 .project
