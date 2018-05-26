@@ -12,15 +12,15 @@ package divide;
  * 3.全负向量的最大子序列为0
  * 4，单一向量如果为正的最大子序列本身,如果为负最大子序列为0
  */
-public class MaximunSubvectorSum {
+public class DivMaximunSubvectorSum {
 
     private int[] array;
 
-    public MaximunSubvectorSum(){
+    public DivMaximunSubvectorSum(){
 
     }
 
-    public MaximunSubvectorSum(int[] array){
+    public DivMaximunSubvectorSum(int[] array){
         this.array = array;
     }
 
@@ -81,7 +81,7 @@ public class MaximunSubvectorSum {
     public static void main(String[] args) {
 
         int[] array = {31,-41,59,26,-53,58,97,-93,-23,84};
-        MaximunSubvectorSum ms = new MaximunSubvectorSum(array);
+        DivMaximunSubvectorSum ms = new DivMaximunSubvectorSum(array);
         System.out.print(ms.maxSubvectorSum());
 
     }
